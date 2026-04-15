@@ -62,16 +62,16 @@ const projects = [
     image: '/projects/p_4.jpg',
     link: 'https://kanbanboard-deploy-frontend.onrender.com/',
   },
-  {
-    id: 5,
-    title: 'Web Learning Portal App',
-    category: 'Frontend',
-    description:
-      'Created a student-facing coding Q&A portal where users can easily search programming questions across multiple languages and receive cleanly structured output.',
-    tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
-    image: '/project4.jpg', // Reusing placeholder, update as needed
-    link: '#',
-  },
+  // {
+  //   id: 5,
+  //   title: 'Web Learning Portal App',
+  //   category: 'Frontend',
+  //   description:
+  //     'Created a student-facing coding Q&A portal where users can easily search programming questions across multiple languages and receive cleanly structured output.',
+  //   tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+  //   image: '/project4.jpg',
+  //   link: '#',
+  // },
 ];
 
 export default function Projects() {
