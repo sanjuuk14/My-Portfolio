@@ -19,7 +19,7 @@ const projects = [
       'MongoDB',
       'Tailwind CSS',
     ],
-    image: '/projects/p_1.JPG',
+    image: '/projects/p_1.jpg',
     link: 'https://www.zobsai.com',
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     description:
       'Developed a responsive photography portfolio website with an advanced admin dashboard. Designed a CMS-like panel enabling dynamic image uploads, gallery management, filtering, and pagination without manual code changes.',
     tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB Atlas'],
-    image: '/projects/p_2.JPG',
+    image: '/projects/p_2.jpg',
     link: 'https://sandeep-photography-frontend.onrender.com/',
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     description:
       'Built a real-time WhatsApp-style chat application for bi-directional event-driven communication. Implemented user authentication, private messaging, and a fully responsive UI.',
     tech: ['MERN Stack', 'Socket.io', 'TailwindCSS', 'Daisy UI', 'Render'],
-    image: '/projects/p_3.JPG',
+    image: '/projects/p_3.jpg',
     link: 'https://chat-app-test-1d44.onrender.com/login',
   },
 
@@ -70,7 +70,7 @@ const projects = [
       'MongoDB',
       'Render',
     ],
-    image: '/projects/p_4.JPG',
+    image: '/projects/p_4.jpg',
     link: 'https://kanbanboard-deploy-frontend.onrender.com/',
   },
 ];
