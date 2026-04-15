@@ -44,14 +44,22 @@ export default function Header() {
 
         {/* Action / Social */}
         <div className="flex items-center gap-4">
-          <a
+          {/* <Link
             href="https://github.com"
             target="_blank"
             rel="noreferrer"
             className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
           >
             GitHub
-          </a>
+          </Link> */}
+          <Link
+            href="https://linkedin.com/in/sandeep59"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+          >
+            LinkedIn
+          </Link>
         </div>
       </div>
     </motion.header>

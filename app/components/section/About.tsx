@@ -45,7 +45,7 @@ export default function About() {
             className="relative w-full aspect-[3/4] md:h-[400px] rounded-sm overflow-hidden bg-neutral-200"
           >
             <Image
-              src="/profile.jpg" // Put your image in the 'public' folder and name it profile.jpg
+              src="/profile/profile.jpg" // Put your image in the 'public' folder and name it profile.jpg
               alt="Profile Picture"
               fill
               className="object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"

@@ -1,39 +1,77 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import ParallaxImage from '../utility/ParallaxImage';
+import Link from 'next/link';
 
-// Dummy data representing your MERN stack work
+// Real data representing your actual projects
 const projects = [
   {
     id: 1,
-    title: 'Real-Time Operations Dashboard',
-    category: 'Full Stack Development',
+    title: 'Zobsai',
+    category: 'Full-Stack',
     description:
-      'A high-performance dashboard for monitoring live system metrics. Built with a Node.js/Express backend, MongoDB for persistent storage, and WebSockets for real-time data streaming to a Next.js frontend.',
-    tech: ['Next.js', 'Node.js', 'MongoDB', 'Socket.io'],
-    image: '/project1.jpg', // Add a placeholder image to your public folder
-    link: '#',
+      'Worked as Frontend Developer during an internship at Help Study Abroad; built and integrated key UI modules for the Zobsai platform serving real users. Designed responsive page layouts and reusable component libraries, ensuring cross-device compatibility and fast page loads.',
+    tech: [
+      'Next.js',
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Tailwind CSS',
+    ],
+    image: '/projects/p_1.JPG',
+    link: 'https://www.zobsai.com',
   },
   {
     id: 2,
-    title: 'AI Chatbot Interface',
-    category: 'Frontend & API Integration',
+    title: 'Sandeep-Photography',
+    category: 'Full-Stack',
     description:
-      'A fluid, conversational UI built to interact with custom LLM APIs. Features streaming text responses, markdown rendering, and strict secure authentication flows.',
-    tech: ['React', 'Express', 'Tailwind', 'REST APIs'],
-    image: '/project2.jpg',
-    link: '#',
+      'Developed a responsive photography portfolio website with an advanced admin dashboard. Designed a CMS-like panel enabling dynamic image uploads, gallery management, filtering, and pagination without manual code changes.',
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB Atlas'],
+    image: '/projects/p_2.JPG',
+    link: 'https://sandeep-photography-frontend.onrender.com/',
   },
   {
     id: 3,
-    title: 'Cross-Platform Utility App',
-    category: 'Mobile Architecture',
+    title: 'Chatt App',
+    category: 'Full-Stack',
     description:
-      'A system-level utility application seamlessly bridging the gap between web and mobile experiences using shared logic and unified backend architecture.',
-    tech: ['React Native', 'MongoDB', 'Framer Motion'],
-    image: '/project1.jpg',
-    link: '#',
+      'Built a real-time WhatsApp-style chat application for bi-directional event-driven communication. Implemented user authentication, private messaging, and a fully responsive UI.',
+    tech: ['MERN Stack', 'Socket.io', 'TailwindCSS', 'Daisy UI', 'Render'],
+    image: '/projects/p_3.JPG',
+    link: 'https://chat-app-test-1d44.onrender.com/login',
+  },
+
+  // {
+  //   id: 4,
+  //   title: 'Web Learning Portal App',
+  //   category: 'Frontend',
+  //   description:
+  //     'Created a student-facing coding Q&A portal where users can easily search programming questions across multiple languages and receive cleanly structured output.',
+  //   tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+  //   image: '/project4.jpg', // Reusing placeholder, update as needed
+  //   link: '#',
+  // },
+
+  {
+    id: 5,
+    title: 'KanBan App',
+    category: 'Full-Stack',
+    description:
+      'Built a KanBan-style task management app with drag-and-drop functionality, and a fully responsive UI. ',
+    tech: [
+      'React',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'TailwindCSS',
+      'Node.js',
+      'MongoDB',
+      'Render',
+    ],
+    image: '/projects/p_4.JPG',
+    link: 'https://kanbanboard-deploy-frontend.onrender.com/',
   },
 ];
 
@@ -89,7 +127,11 @@ export default function Projects() {
                   transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                   className="w-full md:w-3/5 relative aspect-[4/3] bg-neutral-200 overflow-hidden group rounded-sm"
                 >
-                  <ParallaxImage src={project.image} alt={project.title} />
+                  <ParallaxImage
+                    src={project.image}
+                    alt={project.title}
+                    href={project.link}
+                  />
                   {/* Subtle hover overlay */}
                   <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
@@ -125,13 +167,14 @@ export default function Projects() {
                   </div>
 
                   {/* Minimal Link */}
-                  <a
+                  <Link
+                    target="_blank"
                     href={project.link}
                     className="group relative inline-flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-neutral-900 w-max"
                   >
                     View Project
                     <span className="block w-4 h-[1px] bg-neutral-900 transition-all duration-300 group-hover:w-8"></span>
-                  </a>
+                  </Link>
                 </motion.div>
               </div>
             );

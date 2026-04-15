@@ -36,7 +36,7 @@ export default function Footer() {
         {/* Middle Section: Massive Interactive Email */}
         <div className="w-full flex items-center justify-center my-12 md:my-0">
           <motion.a
-            href="mailto:spanwar@gmail.com"
+            href="mailto:spanwar7296@gmail.com"
             className="group relative text-[12vw] md:text-[8vw] font-medium tracking-tighter leading-none text-neutral-900 overflow-hidden"
             initial="initial"
             whileHover="hover"
@@ -56,9 +56,12 @@ export default function Footer() {
         {/* Bottom Section: Socials & Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-neutral-200">
           <div className="flex gap-8">
-            <SocialLink href="https://github.com" label="GitHub" />
-            <SocialLink href="https://linkedin.com" label="LinkedIn" />
-            <SocialLink href="https://twitter.com" label="Twitter" />
+            {/* <SocialLink href="https://github.com" label="GitHub" /> */}
+            <SocialLink
+              href="https://www.linkedin.com/in/sandeep59"
+              label="LinkedIn"
+            />
+            {/* <SocialLink href="https://twitter.com" label="Twitter" /> */}
           </div>
 
           <p className="text-sm text-neutral-400">

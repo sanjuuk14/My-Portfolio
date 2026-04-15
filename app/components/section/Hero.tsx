@@ -44,7 +44,7 @@ export default function Hero() {
         </motion.p>
 
         {/* Upgraded Cascading Text Reveal */}
-        <motion.h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[1.1] mb-12 flex flex-wrap gap-x-4 max-w-4xl">
+        <motion.h1 className="text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1] mb-12 flex flex-wrap gap-x-4 max-w-2xl">
           {words.map((word, i) => (
             <motion.span
               key={i}

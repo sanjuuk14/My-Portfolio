@@ -14,7 +14,7 @@ type FloatingTextNodeProps = {
 function FloatingTextNode({
   text,
   position,
-  scale = 0.15,
+  scale = 0.1,
 }: FloatingTextNodeProps) {
   return (
     <group position={position}>
@@ -28,7 +28,7 @@ function FloatingTextNode({
             anchorX="center"
             anchorY="middle"
             // Adding a tiny dark outline makes it pop against the light background
-            outlineWidth={0.05}
+            outlineWidth={0.02}
             outlineColor="#171717"
           >
             {text}
@@ -150,7 +150,7 @@ function CyberNode() {
 
 export default function Hero3D() {
   return (
-    <div className="absolute top-0 right-0 w-full md:w-2/3 h-full z-0 opacity-60 md:opacity-100 pointer-events-none">
+    <div className="absolute top-0 right-0 w-full md:w-2/3 h-full  z-0 opacity-60 md:opacity-100 pointer-events-none">
       <Canvas camera={{ position: [0, 0, 4.5], fov: 45 }}>
         <ambientLight intensity={1} />
         <CyberNode />

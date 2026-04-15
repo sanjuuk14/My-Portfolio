@@ -2,13 +2,15 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type ParallaxImageProps = {
   src: string;
   alt: string;
+  href: string;
 };
 
-export default function ParallaxImage({ src, alt }: ParallaxImageProps) {
+export default function ParallaxImage({ src, alt, href }: ParallaxImageProps) {
   const containerRef = useRef(null);
 
   // Hook into the scroll position of this specific container
@@ -26,17 +28,16 @@ export default function ParallaxImage({ src, alt }: ParallaxImageProps) {
       ref={containerRef}
       className="relative w-full h-full overflow-hidden rounded-sm"
     >
-      <motion.div
-        style={{ y }}
-        className="absolute inset-[-15%] w-[130%] h-[130%]"
-      >
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-          sizes="(max-width: 768px) 100vw, 60vw"
-        />
+      <motion.div style={{ y }} className="absolute inset-[-15%]  h-[130%]">
+        <Link href={href} target="_blank">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer"
+            sizes="(max-width: 768px) 100vw, 60vw"
+          />
+        </Link>
       </motion.div>
     </div>
   );
